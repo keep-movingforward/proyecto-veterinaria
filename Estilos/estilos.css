@@ -1,482 +1,483 @@
+@import url(blog-estilos.css);
 /* Estilos para el cuerpo de la página */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #fff;
-  }
-  
-  /* Estilos para la sección de inicio */
-  #inicio {
-    background-color: #885ead;
-    color: #fff;
-  }
-  
-  /* Estilos para el logo de la barra de navegación */
-  .logo-nav {
-    max-width: 80px;
-    height: auto;
-    margin: 5px;
-  }
-  
-  /* Estilos para la barra de navegación */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    background-color: transparent;
-    z-index: 1;
-  }
-  
-  nav.scroll {
-    background-color: #885ead;
-  }
-  
-  
-  /* Estilos para los elementos de la barra de navegación */
-  nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
-    text-align: center;
-  }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
 
-  .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu li {
-    margin: 0 10px;
-  }
-  
-  
-  /* Estilos para la imagen del hero */
-  .hero-image {
-    position: relative;
-    height: 100vh;
-    background-image: url("/Assets/hero.jpg");
-    background-size: cover;
-  }
+/* Estilos para la sección de inicio */
+#inicio {
+  background-color: #885ead;
+  color: #fff;
+}
 
-  .hero-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* color semi-transparente */
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap; /* para que el texto no se divida en dos líneas */
-  }
+/* Estilos para el logo de la barra de navegación */
+.logo-nav {
+  max-width: 80px;
+  height: auto;
+  margin: 5px;
+}
 
-  /********************************* Sección Presentación ******************/
+/* Estilos para la barra de navegación */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  #presentacion {
-    background-color: #f5f5f5;
-    padding: 10% 0;
-  }
-  
-  .contenedor-presentacion {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .presentacion-titulo {
-    font-size: 36px;
-    color: #885ead;
-    margin-bottom: 30px;
-  }
-  
-  .presentacion-parrafo {
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 0 auto;
-    margin-bottom: 3%;
-    max-width: 60%;
-  }
-  
-  .presentacion-imagenes {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .presentacion-imagen {
-    flex-basis: calc(33.33% - 20px);
+  background-color: transparent;
+  z-index: 1;
+}
 
-  }
-  
-  .presentacion-imagen img {
-    width: 100%;
-    height: 100%;
-    border-radius: 3%;
-    object-fit: cover;
-  }
-  
+nav.scroll {
+  background-color: #885ead;
+}
 
-  /**************************** SECCIÓN CLINICA ***********/
-  
+
+/* Estilos para los elementos de la barra de navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+
+/* Estilos para la imagen del hero */
+.hero-image {
+  position: relative;
+  height: 100vh;
+  background-image: url("/Assets/hero.jpg");
+  background-size: cover;
+}
+
+.hero-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* color semi-transparente */
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap; /* para que el texto no se divida en dos líneas */
+}
+
+/********************************* Sección Presentación ******************/
+
+#presentacion {
+  background-color: #f5f5f5;
+  padding: 10% 0;
+}
+
+.contenedor-presentacion {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.presentacion-titulo {
+  font-size: 36px;
+  color: #885ead;
+  margin-bottom: 30px;
+}
+
+.presentacion-parrafo {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-bottom: 3%;
+  max-width: 60%;
+}
+
+.presentacion-imagenes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.presentacion-imagen {
+  flex-basis: calc(33.33% - 20px);
+
+}
+
+.presentacion-imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3%;
+  object-fit: cover;
+}
+
+
+/**************************** SECCIÓN CLINICA ***********/
+
 /* Estilos generales */
 .clinica {
-    position: relative;
-    margin-top: 50px;
-    padding: 50px 0;
-    background-image: url('../Assets/service.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-    z-index: -1;
-  }
-  
-  /* Fondo antes de la imagen de fondo */
-  .clinica:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(17, 0, 255, 0.7);
-    z-index: -2;
-  }
-  
-  /* Contenedor de las columnas */
-  .contenedor-clinica {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 1;
-  }
-  
-  /* Columnas */
-  .columna-clinica {
-    width: 45%;
-    margin-bottom: 50px;
-    transition: transform 0.3s ease;
-  }
-  
-  .columna-clinica:hover {
-    transform: translateY(-10px);
-  }
-  
-  /* Imágenes de cabecera */
-  .cabecera-imagen {
-    height: 100px;
-    margin: 0 auto 20px auto;
-    text-align: center;
-  }
-  
-  .columna-clinica:nth-child(1) .cabecera-imagen {
-    content: url('../Assets/cabecera1.png');
-  }
-  
-  .columna-clinica:nth-child(2) .cabecera-imagen {
-    content: url('../Assets/cabecera2.png');
-  }
-  
-  /* Títulos */
-  .sub-clinica {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-  }
-  
-  .columna-clinica:hover h2 {
-    color: #b2d9ea;
-  }
-  
-  /* Párrafos */
-  .parrafo-clinica {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-  }
-  
-  .columna-clinica:hover p {
-    color: #b2d9ea;
-  }
-  
-  /***************************** SECCIÓN PET-SHOP **************/
+  position: relative;
+  margin-top: 50px;
+  padding: 50px 0;
+  background-image: url('../Assets/service.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  z-index: -1;
+}
 
-  #pet-shop {
-    width: 100%;
-    background-color: #fff;
-    padding: 50px 0;
-  }
-  
-  #pet-shop h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
+/* Fondo antes de la imagen de fondo */
+.clinica:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 0, 255, 0.7);
+  z-index: -2;
+}
 
-  .carousel-container {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
+/* Contenedor de las columnas */
+.contenedor-clinica {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
 
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+/* Columnas */
+.columna-clinica {
+  width: 45%;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
 
-  .carousel-slide::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .carousel-slide li {
-    flex: 0 0 auto;
-    width: 100%;
-    height: 50%;
-  }
-  
-  .carousel-slide img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
+.columna-clinica:hover {
+  transform: translateY(-10px);
+}
 
-  .carousel-prev,
-  .carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 4rem;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .carousel-prev {
-    left: 10px;
-  }
-  
-  .carousel-next {
-    right: 10px;
-  }
+/* Imágenes de cabecera */
+.cabecera-imagen {
+  height: 100px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
 
-  .carousel-dots-container {
-    margin-top: 30px;
-    text-align: center;
-  }
-  
-  .carousel-dots {
-    display: inline-block;
-  }
-  
-  .carousel-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .carousel-dot.active {
-    background-color: black
-  }
+.columna-clinica:nth-child(1) .cabecera-imagen {
+  content: url('../Assets/cabecera1.png');
+}
 
-  /****************************** Sección de contacto */
-  #contacto {
-    background-color: #885ead;
-    color: #fff;
-    padding: 80px 0;
-  }
-  
-  .contenedor-contacto {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .informacion-contacto {
-    flex: 1;
-  }
-  
-  .informacion-contacto h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .informacion-contacto ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .informacion-contacto li {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-  
-  .informacion-contacto i {
-    margin-right: 10px;
-    color: #CE96CE;
-  }
-  
-  .redes-sociales {
-    display: flex;
-  }
-  
-  .redes-sociales a {
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 30px;
-    color: #CE96CE;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .redes-sociales a:hover {
-    transform: scale(1.2);
-    color: #fff;
-  }
-  
-  
+.columna-clinica:nth-child(2) .cabecera-imagen {
+  content: url('../Assets/cabecera2.png');
+}
+
+/* Títulos */
+.sub-clinica {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.columna-clinica:hover h2 {
+  color: #b2d9ea;
+}
+
+/* Párrafos */
+.parrafo-clinica {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.columna-clinica:hover p {
+  color: #b2d9ea;
+}
+
+/***************************** SECCIÓN PET-SHOP **************/
+
+#pet-shop {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+#pet-shop h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.carousel-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-slide::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide li {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 50%;
+}
+
+.carousel-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-dots-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.carousel-dots {
+  display: inline-block;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-dot.active {
+  background-color: black
+}
+
+/****************************** Sección de contacto */
+#contacto {
+  background-color: #885ead;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.contenedor-contacto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.informacion-contacto {
+  flex: 1;
+}
+
+.informacion-contacto h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.informacion-contacto ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.informacion-contacto li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.informacion-contacto i {
+  margin-right: 10px;
+  color: #CE96CE;
+}
+
+.redes-sociales {
+  display: flex;
+}
+
+.redes-sociales a {
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 30px;
+  color: #CE96CE;
+  transition: all 0.3s ease-in-out;
+}
+
+.redes-sociales a:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
 
 
-  /* Estilos para el pie de página */
-  footer {
-    background-color: #885ead;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  footer p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Estilos para dispositivos móviles */
-  @media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        overflow: hidden;
-        padding-bottom: 20px;
-     
-      }
-      
-      nav ul {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      nav li {
-        margin: 10px 0;
-      }
 
 
-      .hero-text h1 {
-        font-size: 32px;
-        white-space: normal;
-      }
+/* Estilos para el pie de página */
+footer {
+  background-color: #885ead;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      overflow: hidden;
+      padding-bottom: 20px;
+   
+    }
+    
+    nav ul {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    nav li {
+      margin: 10px 0;
+    }
 
 
-        /* Contenedor de las columnas */
-  .contenedor-clinica {
-    flex-direction: column;
-  }
+    .hero-text h1 {
+      font-size: 32px;
+      white-space: normal;
+    }
 
-  /* Columnas */
-  .columna-clinica {
-    width: 90%;
-  }
 
-  /* Imágenes de cabecera */
-  .cabecera-imagen {
-    height: 60px;
-  }
+      /* Contenedor de las columnas */
+.contenedor-clinica {
+  flex-direction: column;
+}
 
-  /* Títulos */
-  .sub-clinica {
-    font-size: 2rem;
-  }
+/* Columnas */
+.columna-clinica {
+  width: 90%;
+}
 
-  /* Párrafos */
-  .parrafo-clinica {
-    font-size: 1rem;
-  }
+/* Imágenes de cabecera */
+.cabecera-imagen {
+  height: 60px;
+}
+
+/* Títulos */
+.sub-clinica {
+  font-size: 2rem;
+}
+
+/* Párrafos */
+.parrafo-clinica {
+  font-size: 1rem;
+}
 
 
 .contenedor-contacto {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-      
+    
 .redes-sociales {
-          margin-top: 20px;
-        }
-      
+        margin-top: 20px;
+      }
+    
 .redes-sociales a {
-          margin-left: 0;
-          margin-right: 20px;
-        }
-      
+        margin-left: 0;
+        margin-right: 20px;
+      }
+    
 }
-  
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Estilos/estilos.css">
+    <title>Mi Mascota</title>
+</head>
+<body>
+    <!--Contenedor General-->
+    <div class="container">
+    <header>
+        <!--Sección inicial con logo en la barra nav-->
+        <section id="inicio">
+        <nav>
+            <img class="logo-nav" src="Assets/veterinaria-logo.png" alt="Logo Veterinaria">
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Pet Shop</a></li>
+            <li><a href="#">Quienes Somos</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+        </nav>
+        </section>
+    </header>
+    <div class="hero-image blog">
+        <!--Imagen que cubre la parte inicial hasta barra de menús-->
+            <div class="hero-text">
+              <h1>Recomendaciones y consejos</h1>
+            </div>
+          </div>
+    <main> 
+        <section class="blog" id="presentacion">
+        <div class="contenedor-presentacion" id="cont-blog">
+            <h2>Buscador</h2>
+        </div>
+        <div id="search-box">
+            <form action="/search" id="search-form" method="get" target="_top">
+                <input type="text" name="q" id="search-text" placeholder="Busca un blog">
+                <button id="search-button" type="submit"><span>Busca!</span></button>
+            </form>
+        </div>
+
+        <div class="blog-cajas">
+            <div class="container-card card-1">
+                <div class="img-card">
+                    <img src="https://www.supermasymas.com/blog/wp-content/uploads/2018/08/cepillar-perro.jpg" alt="cepillar_perro">
+                </div>
+                <div class="text-card">
+                    <h3>Como cuidar el cabello de tu mascota</h3>
+                    <p class="fecha">17/04/23</p>
+                    <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Necessitatibus expedita possimus inventore dignissimos 
+                        dolorem nostrum fugiat aliquam, veritatis eum...</p>
+                    </div>
+                    </div>
+            </div>
+            <div class="container-card card-2">
+                <div class="img-card">
+                    <img src="https://www.prensalibre.com/wp-content/uploads/2019/01/nutricion2.jpg?quality=82&w=1024" alt="alimento-para-animales">
+                </div>
+                <div class="text-card">
+                    <h3>Que alimento debe comer tu mascota</h3>
+                    <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Necessitatibus expedita possimus inventore dignissimos 
+                        dolorem nostrum fugiat aliquam, veritatis eum...</p>
+                    </div>
+                    <p class="fecha">17/04/23</p>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!--Footer derechos y desarrollador-->
+    <footer>
+        <p>© 2023 Mi Mascota Veterinaria. Todos los derechos reservados.</p>
+    </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="Acciones/acciones.js"></script>
+</body>
+</html>
