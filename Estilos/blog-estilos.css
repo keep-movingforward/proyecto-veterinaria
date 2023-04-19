@@ -2,6 +2,7 @@
 
 .hero-image.blog{
     background-image: url("/Assets/blog.jpg");
+    background-position: top;
   }
 
 .blog {
@@ -23,6 +24,8 @@
 
 #cont-blog {
     grid-area: 1 / 5 / 2 / 2;
+    position: relative;
+    align-self: flex-start;
 }
 .blog-cajas {
   top: 5%;
@@ -30,7 +33,6 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  
   position: relative;
   width: 100%;
   height: 100%;
@@ -167,4 +169,92 @@
   color: #7b7992;
   left: 0%;
   font-weight: 500;
+}
+/* ------------------------------ MEDIA QUERY -------*/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .text-card h3{
+    font-size: medium;
+  }
+
+
+}
+
+@media screen and (max-width: 767px) {
+  .container-card {
+    padding-top:7%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 70%;
+  } 
+  .blog {
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(8,1fr);
+    row-gap: 15px;
+    }  
+
+  #cont-blog {
+    grid-area: 1 / 2 / 1 / 5;  
+  }
+.blog-cajas {
+  /*  grid-area: 2 / 2 / 8 / 5;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 30px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    gap: inherit;
+  }
+    
+  #search-box {
+    padding-bottom: 10%;
+    grid-area: 1 / 2 / 1 / 5;
+    align-self: flex-end;
+    }
+  .card-1{
+    grid-area: 1 / 1 / 4 / 7;
+  }
+  .card-2 {
+    grid-area: 4 / 1 / 7 /7;
+  }
+  main {
+    display: flex;
+  }
+  .img-card{
+    left: 0%;
+    align-self: flex-start;
+    width: 80%;
+    box-shadow: 0px 14px 20px rgba(33, 28, 34, 0.2);
+  }
+  .text-card {
+    top: -20%;
+    flex-wrap: wrap;
+  }
+  .img-card img {
+    height:100%;
+  }
+  
+  .text-card h3{
+    padding-top: 2%;
+    font-size: 3vw;
+  }
+  .text-card div{
+    top: 0%;
+    
+  
+  }
+  .text-card .fecha{
+    font-size: 1.5vw;
+    right: 1%;
+    top: 4%;
+    
+  }
+  .text-card div p {
+    font-size: 2.5vw;
+    padding-left: 3%;
+    text-align: justify;
+    padding-right: 3%;
+  }
 }
