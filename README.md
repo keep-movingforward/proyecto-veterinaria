@@ -57,7 +57,3 @@ Si tienes alguna pregunta o consulta relacionada con el proyecto, no dudes en co
 - Correo electrónico: alexleaderhere@gmail.com
 
 ¡Gracias por leer sobre Veterinaria Mi Mascota! Esperamos que encuentres útil y valioso este sitio web para ti y tus mascotas.
-
-*Reemplaza los textos en corchetes con la información específica de tu proyecto y asegúrate de agregar cualquier imagen o logotipo correspondiente.*
-
-Recuerda que este es solo un ejemplo y puedes personalizar el README según tus preferencias y necesidades. ¡Buena suerte con tu proyecto! Si tienes más preguntas, no dudes en preguntar.
