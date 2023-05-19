@@ -39,7 +39,7 @@ Veterinaria Mi Mascota es un sitio web desarrollado como parte del curso Full St
 
 ## Licencia
 
-Este proyecto está bajo la licencia [Nombre de la licencia]. Se reservan todos los derechos de autor.
+Este proyecto está bajo la licencia Creative Commons. Se reservan todos los derechos de autor.
 
 ## Autor
 
