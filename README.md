@@ -1,6 +1,6 @@
 # Veterinaria Mi Mascota
 
-![Logo de Veterinaria Mi Mascota](Assets/veterinaria-logo) (Reemplaza "ruta/a/logo.png" con la ruta de tu logo)
+![Logo de Veterinaria Mi Mascota](Assets/veterinaria-logo)
 
 Este proyecto es un sitio web para una veterinaria llamada Veterinaria Mi Mascota. Proporciona información sobre los servicios ofrecidos, una sección de pet-shop, un blog sobre mascotas y una página de contacto.
 
