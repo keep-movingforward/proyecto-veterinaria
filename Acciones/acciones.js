@@ -7,56 +7,84 @@ window.addEventListener('scroll', function() {
     }
   });
 
+
+const logo = document.querySelector('.logo-nav');
+const menu = document.querySelector('.menu');
+
+logo.addEventListener('click', () => {
+  menu.classList.toggle('menu--open');
+});
+
+
 /********************************* Carrusel */
-$(document).ready(function() {
-    var slideIndex = 0;
-    showSlides();
-    
-    function showSlides() {
-      var i;
-      var slides = $(".carousel-slide").children();
-      var dots = $(".carousel-dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 3000); // Timer Here
+document.addEventListener("DOMContentLoaded", function() {
+  var slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    var i;
+    var slides = document.querySelector(".carousel-slide").children;
+    var dots = document.querySelectorAll(".carousel-dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
     }
-    
-    $(".carousel-next").click(function() {
-      var slides = $(".carousel-slide").children();
-      var dots = $(".carousel-dot");
-      slides[slideIndex-1].style.display = "none";
-      dots[slideIndex-1].className = dots[slideIndex-1].className.replace(" active", "");
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-    });
-    
-    $(".carousel-prev").click(function() {
-      var slides = $(".carousel-slide").children();
-      var dots = $(".carousel-dot");
-      slides[slideIndex-1].style.display = "none";
-      dots[slideIndex-1].className = dots[slideIndex-1].className.replace(" active", "");
-      slideIndex--;
-      if (slideIndex < 1) {
-        slideIndex = slides.length;
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-    });
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 3000);
+  }
+
+  document.querySelector(".carousel-next").addEventListener("click", function() {
+    var slides = document.querySelector(".carousel-slide").children;
+    var dots = document.querySelectorAll(".carousel-dot");
+    slides[slideIndex - 1].style.display = "none";
+    dots[slideIndex - 1].className = dots[slideIndex - 1].className.replace(" active", "");
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
   });
-  
+
+  document.querySelector(".carousel-prev").addEventListener("click", function() {
+    var slides = document.querySelector(".carousel-slide").children;
+    var dots = document.querySelectorAll(".carousel-dot");
+    slides[slideIndex - 1].style.display = "none";
+    dots[slideIndex - 1].className = dots[slideIndex - 1].className.replace(" active", "");
+    slideIndex--;
+    if (slideIndex < 1) {
+      slideIndex = slides.length;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  });
+});
 
   
+/*-------Animación Entrada--------*/
+
+const elementAnimation = [
+  { transform: "translateY(-100px)", opacity: 0 },
+  { transform: "translateY(0)", opacity: 1 },
+];
+
+const elementTiming = {
+  duration: 700,
+  iterations: 1,
+};
+
+const navElements = document.querySelectorAll("nav *");
+const titleElement = document.querySelector(".hero-text h1");
+
+[...navElements, titleElement].forEach((element) => {
+  element.animate(elementAnimation, elementTiming);
+});
+
+

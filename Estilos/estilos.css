@@ -1,545 +1,1267 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
 /* Estilos para el cuerpo de la página */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #fff;
-  }
-  
-  /* Estilos para la sección de inicio */
-  #inicio {
-    background-color: #885ead;
-    color: #fff;
-  }
-  
-  /* Estilos para el logo de la barra de navegación */
-  .logo-nav {
-    max-width: 80px;
-    height: auto;
-    margin: 5px;
-  }
-  
-  /* Estilos para la barra de navegación */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    background-color: transparent;
-    z-index: 1;
-  }
-  
-  nav.scroll {
-    background-color: #885ead;
-  }
-  
-  
-  /* Estilos para los elementos de la barra de navegación */
-  nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
-    text-align: center;
-  }
-  
-  nav li {
-    margin: 0 10px;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #fff;
+}
 
-  .menu {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu li {
-    margin: 0 10px;
-  }
-  
-  
-  /* Estilos para la imagen del hero */
-  .hero-image {
-    position: relative;
-    height: 100vh;
-    background-image: url("/Assets/hero.jpg");
-    background-size: cover;
-  }
-
-  .hero-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* color semi-transparente */
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  
-  h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 48px;
-    font-weight: bold;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap; /* para que el texto no se divida en dos líneas */
-  }
-
-  /********************************* Sección Presentación ******************/
-
-  #presentacion {
-    background-color: #f5f5f5;
-    padding: 10% 0;
-  }
-  
-  .contenedor-presentacion {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .presentacion-titulo {
-    font-size: 36px;
-    color: #885ead;
-    margin-bottom: 30px;
-  }
-  
-  .presentacion-parrafo {
-    font-size: 18px;
-    line-height: 1.5;
-    margin: 0 auto;
-    margin-bottom: 3%;
-    max-width: 60%;
-  }
-  
-  .presentacion-imagenes {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .presentacion-imagen {
-    flex-basis: calc(33.33% - 20px);
-
-  }
-  
-  .presentacion-imagen img {
-    width: 100%;
-    height: 100%;
-    border-radius: 3%;
-    object-fit: cover;
-  }
-  
-
-  /**************************** SECCIÓN CLINICA ***********/
-  
-/* Estilos generales */
-.clinica {
-    position: relative;
-    margin-top: 50px;
-    padding: 50px 0;
-    background-image: url('../Assets/service.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-    z-index: -1;
-  }
-  
-  /* Fondo antes de la imagen de fondo */
-  .clinica:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(17, 0, 255, 0.7);
-    z-index: -2;
-  }
-  
-  /* Contenedor de las columnas */
-  .contenedor-clinica {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    z-index: 1;
-  }
-  
-  /* Columnas */
-  .columna-clinica {
-    width: 45%;
-    margin-bottom: 50px;
-    transition: transform 0.3s ease;
-  }
-  
-  .columna-clinica:hover {
-    transform: translateY(-10px);
-  }
-  
-  /* Imágenes de cabecera */
-  .cabecera-imagen {
-    height: 100px;
-    margin: 0 auto 20px auto;
-    text-align: center;
-  }
-  
-  .columna-clinica:nth-child(1) .cabecera-imagen {
-    content: url('../Assets/cabecera1.png');
-  }
-  
-  .columna-clinica:nth-child(2) .cabecera-imagen {
-    content: url('../Assets/cabecera2.png');
-  }
-  
-  /* Títulos */
-  .sub-clinica {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-  }
-  
-  .columna-clinica:hover h2 {
-    color: #b2d9ea;
-  }
-  
-  /* Párrafos */
-  .parrafo-clinica {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
-  }
-  
-  .columna-clinica:hover p {
-    color: #b2d9ea;
-  }
-  
-  /***************************** SECCIÓN PET-SHOP **************/
-
-  #pet-shop {
-    width: 100%;
-    background-color: #fff;
-    padding: 50px 0;
-  }
-  
-  #pet-shop h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-
-  .carousel-container {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    width: 100%;
-    overflow-x: auto;
-
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .carousel-slide::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .carousel-slide li {
-    flex: 0 0 auto;
-    width: 100%;
-    height: 50%;
-  }
-  
-  .carousel-slide img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  .carousel-prev,
-  .carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 4rem;
-    color: #fff;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .carousel-prev {
-    left: 10px;
-  }
-  
-  .carousel-next {
-    right: 10px;
-  }
-
-  .carousel-dots-container {
-    margin-top: 30px;
-    text-align: center;
-  }
-  
-  .carousel-dots {
-    display: inline-block;
-  }
-  
-  .carousel-dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .carousel-dot.active {
-    background-color: black
-  }
-
-  /****************************** Sección de contacto */
-
-/* Estilos para la sección de contacto */
-
-#contacto {
+/* Estilos para la sección de inicio */
+#inicio {
   background-color: #885ead;
   color: #fff;
+}
+
+/* Estilos para el logo de la barra de navegación */
+.logo-nav {
+  max-width: 80px;
+  height: auto;
+  margin: 5px;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: transparent;
+  z-index: 1;
+}
+
+nav.scroll {
+  background-color: #885ead;
+}
+
+
+/* Estilos para los elementos de la barra de navegación */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav li {
+  margin: 0 10px;
+  font-size: 18px
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.5s, box-shadow 0.5s;
+}
+
+nav a:hover {
+  transition: 0.5s;
+  background-color: #CE96CE;
+  box-shadow: 0px 0px 10px rgba(183, 0, 255, 0.5);
+}
+
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+/* Estilos para la imagen del hero */
+.hero-image {
+  position: relative;
+  height: 100vh;
+  background-image: url("/Assets/hero.jpg");
+  background-size: cover;
+}
+
+.hero-image::before {
+ 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* color semi-transparente */
+}
+
+.hero-text {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* agregar sombra al texto */
+  color: #fff;
+  font-weight: bold;
+  white-space: nowrap; /* para que el texto no se divida en dos líneas */
+}
+
+
+
+
+
+
+/********************************* Sección Presentación ******************/
+
+#presentacion {
+  background-color: #f5f5f5;
+  padding: 6% 0;
+}
+
+.contenedor-presentacion {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.presentacion-titulo {
+  font-size: 36px;
+  color: #885ead;
+  margin-bottom: 30px;
+ 
+}
+
+
+
+
+.presentacion-parrafo {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-bottom: 3%;
+  max-width: 60%;
+}
+
+.presentacion-imagenes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.presentacion-imagen {
+  flex-basis: calc(33.33% - 20px);
+
+}
+
+.presentacion-imagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3%;
+  object-fit: cover;
+}
+
+
+
+
+/**************************** SECCIÓN CLINICA ***********/
+
+/* Estilos generales */
+.clinica {
+  position: relative;
+  margin-top: 50px;
+  padding: 50px 0;
+  background-image: url('../Assets/service.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+  z-index: -1;
+}
+
+/* Fondo antes de la imagen de fondo */
+.clinica:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 0, 255, 0.7);
+  z-index: -2;
+}
+
+/* Contenedor de las columnas */
+.contenedor-clinica {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+/* Columnas */
+.columna-clinica {
+  width: 45%;
+  margin-bottom: 50px;
+  transition: transform 0.3s ease;
+}
+
+.columna-clinica:hover {
+  transform: translateY(-10px);
+}
+
+/* Imágenes de cabecera */
+.cabecera-imagen {
+  height: 100px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.columna-clinica:nth-child(1) .cabecera-imagen {
+  content: url('../Assets/cabecera1.png');
+}
+
+.columna-clinica:nth-child(2) .cabecera-imagen {
+  content: url('../Assets/cabecera2.png');
+}
+
+/* Títulos */
+.sub-clinica {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.columna-clinica:hover h2 {
+  color: #b2d9ea;
+}
+
+/* Párrafos */
+.parrafo-clinica {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.columna-clinica:hover p {
+  color: #b2d9ea;
+}
+
+/***************************** SECCIÓN PET-SHOP **************/
+
+#pet-shop {
+  width: 100%;
+  background-color: #fff;
   padding: 50px 0;
 }
 
-.contenedor-gral-contacto {
+#pet-shop h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #885ead;
+}
+
+.carousel-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  overflow-x: auto;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-slide::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide li {
+  flex: 0 0 auto;
+  width: 100%;
+  height: 50%;
+}
+
+.carousel-slide img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-dots-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.carousel-dots {
+  display: inline-block;
+}
+
+.carousel-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.carousel-dot.active {
+  background-color: black
+}
+
+/****************************** Sección de contacto */
+#contacto {
+  background-color: #885ead;
+  color: #fff;
+  padding: 80px 0;
+}
+
+.contenedor-contacto {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 1%;
+  
 }
 
+/* Estilo para el título */
 .titulo-contacto {
   font-size: 36px;
   text-align: center;
+  width: 100%;
   margin-bottom: 50px;
+  color: #fff;
 }
+
+.titulo-contacto a {
+  text-decoration: none;
+  color: #fff;
+}
+
 
 .contiene-info-mapa {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
   margin-bottom: 50px;
+  
 }
 
 .informacion-contacto {
   flex: 1;
-  margin-right: 50px;
+  max-width: 500px;
+
 }
 
 .informacion-contacto ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
+}
+
+.informacion-contacto li {
+  margin-bottom: 10px;
   font-size: 18px;
+  display: flex;
+  align-items: center;
 }
 
-.informacion-contacto ul li {
-  margin-bottom: 20px;
-}
-
-.informacion-contacto ul li i {
+.informacion-contacto i {
   margin-right: 10px;
-  color: #fff;
+  color: #CE96CE;
 }
 
 #mapa {
   flex: 1;
-  height: 40%;
+max-width: 500px;
+
 }
 
 #mapa iframe {
-  width: 30rem;
-  height: 20rem;
-  padding-bottom: 20px;
+  height: 220px;
+  width: 100%;
 }
 
+
 .contenedor-redes-sociales {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 
 .redes-sociales {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+  display: inline-block;
 }
 
 .redes-sociales a {
   display: inline-block;
   margin: 0 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #CE96CE;
-  text-align: center;
-  line-height: 50px;
+  font-size: 30px;
+  color: #CE96CE;
   transition: all 0.3s ease-in-out;
 }
 
 .redes-sociales a:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 20px #CE96CE;
+  color: #fff;
+}
+
+.redes-sociales a.facebook:hover {
+  background-color: #3b5998;
+}
+
+.redes-sociales a.twitter:hover {
+  background-color: #1DA1F2;
+}
+
+.redes-sociales a.instagram:hover {
+  background-color: #C13584;
+}
+
+.redes-sociales a.youtube:hover {
+  background-color: #FF0000;
 }
 
 .redes-sociales a i {
+  transition: all 0.3s ease-in-out;
+}
+
+.redes-sociales a:hover i {
+  transform: rotate(360deg);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #885ead;
   color: #fff;
-  font-size: 25px;
-  line-height: 50px; /* igual a la altura del círculo */
+  text-align: center;
+  padding: 10px 0;
+}
+
+footer p {
+  margin: 0;
+  padding: 0;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
+  .hero-text {
+    font-size: 22px;
+ 
+  }
+
+  .presentacion-imagenes {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+
+  .cabecera-imagen {
+    height: 86px;
+
+  }
+
+  .sub-clinica {
+    font-size: 2rem;
+ 
+  }
+  
+  .parrafo-clinica {
+    font-size: 1.1rem;
+  }
+
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+      overflow: hidden;
+      padding-bottom: 20px;
+   
+    }
+    
+    nav ul {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    nav li {
+      margin: 10px 0;
+      font-size: 25px;
+    }
+
+
+
+    .menu {
+      display: none;
+    }
+
+    .menu--open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-text {
+      font-size: 1.2rem;
+      white-space: normal;
+    }
+
+    .presentacion-imagenes {
+      padding-left: 1%;
+      padding-right: 1%;
+    }
+
+    .presentacion-parrafo {
+      max-width: 95%;
+    }
+
+      /* Contenedor de las columnas */
+.contenedor-clinica {
+  flex-direction: column;
+}
+
+/* Columnas */
+.columna-clinica {
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+/* Imágenes de cabecera */
+.cabecera-imagen {
+  height: 60px;
+  margin: 0 auto 10px auto;
+}
+
+/* Títulos */
+.sub-clinica {
+  font-size: 2rem;
+}
+
+/* Párrafos */
+.parrafo-clinica {
+  font-size: 1rem;
+}
+
+
+.contenedor-contacto {
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-
-
-
-  
-
-  /*********************** Estilos para el footer */
-  footer {
-    background-color: #885ead;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  footer p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Estilos para dispositivos móviles */
-  @media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        overflow: hidden;
-        padding-bottom: 20px;
-     
-      }
-      
-      nav ul {
-        flex-direction: column;
-        text-align: center;
-      }
-      
-      nav li {
-        margin: 10px 0;
-      }
-
-
-      .hero-text h1 {
-        font-size: 32px;
-        white-space: normal;
-      }
-
-
-        /* Contenedor de las columnas */
-  .contenedor-clinica {
-    flex-direction: column;
-  }
-
-  /* Columnas */
-  .columna-clinica {
-    width: 90%;
-  }
-
-  /* Imágenes de cabecera */
-  .cabecera-imagen {
-    height: 60px;
-  }
-
-  /* Títulos */
-  .sub-clinica {
-    font-size: 2rem;
-  }
-
-  /* Párrafos */
-  .parrafo-clinica {
-    font-size: 1rem;
-  }
-
-
-  .titulo-contacto {
-    font-size: 28px;
-    }
-    .contiene-info-mapa {
-    flex-direction: column;
-    align-items: center;
-    }
-    .informacion-contacto {
-    margin-right: 0;
-    margin-bottom: 30px;
-    text-align: center;
-    }
-    #mapa iframe {
-    width: 100%;
-    height: 300px;
-    }
-
-    .redes-sociales a {
-      margin: 0 10px;
-      width: 40px;
-      height: 40px;
-      line-height: 40px;
-      font-size: 20px;
-      }
-      
-      .redes-sociales a i {
-      font-size: 20px;
-      line-height: 40px;
-      text-align: center;
-      }
-      
+.contiene-info-mapa {
+  flex-direction: column;
+  align-items: center;
 }
-  
+
+.informacion-contacto {
+ 
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.informacion-contacto li {
+  display: block;
+}
+
+#mapa {
+  margin-top: 10px;
+}
+    
+.redes-sociales {
+        margin-top: 20px;
+      }
+    
+      .redes-sociales a {
+        margin: 0 10px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        }
+        
+        .redes-sociales a i {
+        font-size: 30px;
+        }
+    
+}
+
+/********************* PÁGINA CONTACTO ****************************/
+/***************************************************/
+
+
+.hero-image-c {
+  position: relative;
+  height: 100vh;
+  background-image: url("/Assets/hero-c.jpg");
+  background-size: cover;
+}
+
+.hero-image-c::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* color semi-transparente */
+}
+
+/***/
+
+/* Estilos para la sección de contacto */
+
+.contenedor-gral-contacto {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+
+
+.formulario-contacto {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.campo-formulario {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.campo-formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.campo-formulario input:focus,
+.campo-formulario textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px #CE96CE;
+}
+
+.boton-formulario {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.boton-formulario button {
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #CE96CE;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.boton-formulario button:hover {
+  background-color: #333;
+}
+
+
+/********************* PÁGINA SOBRE NOSOTROS (ABOUT) ****************************/
+/***************************************************/
+
+
+.hero-image-a {
+  position: relative;
+  height: 100vh;
+  background-image: url("/Assets/hero-image-a.jpg");
+  background-size: cover;
+}
+
+.hero-image-a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el fondo de la sección */
+#about {
+  background-color: #ffffff; 
+  padding: 80px 0; 
+}
+
+/* Estilo para el contenido de la sección */
+.contiene-about {
+  max-width: 1200px; 
+  margin: 0 auto; /* Centra la sección en la página */
+  padding: 0 20px;
+}
+
+/* Estilo para el título principal */
+.contiene-about h2 {
+  font-size: 36px;
+  color: #542c85;
+  text-align: center;
+}
+
+/* Estilo para el párrafo de introducción */
+.contiene-about p:first-of-type {
+  font-size: 20px; 
+  color: #444444; 
+  line-height: 1.5; 
+  margin-bottom: 30px;
+}
+
+/* Estilo para los títulos secundarios */
+.contiene-about h3 {
+  font-size: 24px;
+  color: #542c85;
+  margin-top: 40px; 
+  margin-bottom: 20px;
+}
+
+/* Estilo para los párrafos secundarios */
+.contiene-about p:not(:first-of-type) {
+  font-size: 18px;
+  color: #666666; 
+  line-height: 1.5; 
+  margin-bottom: 20px; 
+}
+
+/* Estilo para la lista de viñetas */
+.contiene-about ul {
+  list-style: disc; /* Establece el estilo de viñetas */
+  margin-left: 40px; /* Añade espacio a la izquierda de la lista */
+}
+
+/* Estilo para los elementos de la lista de viñetas */
+.contiene-about li {
+  font-size: 18px; 
+  color: #666666; /* Color de texto gris medio */
+  line-height: 1.5; 
+  margin-bottom: 10px; 
+}
+
+
+
+/********************* PÁGINA PET SHOP ****************************/
+/***************************************************/
+
+
+.hero-image-p {
+  position: relative;
+  height: 100vh;
+  background-image: url("/Assets/pet-shop.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-image-p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* color semi-transparente */
+}
+
+
+
+#petshop {
+  background-color: white;
+  padding: 50px 0 0 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #6b3e9e;
+}
+
+.petshop-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product-card {
+  width: 300px;
+  background-color: #f7f7f7;
+  border: 1px solid #ebebeb;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: #6b3e9e;
+}
+
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  color: #6b3e9e;
+}
+
+.btn-add-to-cart {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #6b3e9e;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #5a2e8a;
+}
+
+.cart-container {
+  background-color: #6b3e9e;
+  color: white;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.cart-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+
+/* Agregar una clase a la tabla */
+.table-cart {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* Estilos para las celdas de encabezado */
+.table-cart th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  font-size: 18px;
+}
+
+/* Estilos para las celdas de cuerpo */
+.table-cart td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  font-size: 16px;
+}
+
+/* Estilos para los botones de cantidad */
+.btn-decrease-quantity,
+.btn-increase-quantity {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-remove-item {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-remove-item:hover{
+  background-color: #cf2a1e;
+}
+
+.btn-decrease-quantity:hover,
+.btn-increase-quantity:hover
+ {
+  background-color: #3e8e41;
+}
+.quantity {
+  font-size: 1.1rem;
+  margin: 0 0.4rem;
+}
+
+.notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+
+.notification.show {
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 600px) {
+  .table-cart {
+    width: 100%;
+  }
+
+  .table-cart thead {
+    display: none;
+  }
+
+  .table-cart tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table-cart tbody td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+ 
+}
+
+@media only screen and (max-width: 768px) {
+  td > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .btn-remove-item {
+    margin-left: 10px;
+  }
+  .hero-image-p{
+    background-image: url("/Assets/pet-shop-m.png");
+  }
+  .hero-image{
+    background-image: url("/Assets/hero-m2.png");
+  }
+  .hero-image-a{
+    background-image: url("/Assets/hero-a-m.png");
+  }
+}
+
+
+
+
+.cart-item-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart-item-price {
+  font-size: 18px;
+}
+
+.cart-total {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.btn-checkout {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #5a2e8a;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-checkout:hover {
+  background-color: #4c2678;
+}
+
+
+#modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#modal h2 {
+  margin-top: 0;
+}
+
+#payment-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#payment-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+#payment-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#modal-close-btn {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  font-size: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#modal-close-btn:hover {
+  color: red;
+}
+@media screen and (max-width: 480px) {
+  #modal {
+    width: 90%;
+    padding: 10px;
+  }
+
+  #payment-form input {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  #modal-close-btn {
+    font-size: 16px;
+  }
+}
+
+
+/********************* PÁGINA SERVICIOS ****************************/
+/******************************************************************/
+
+
+.hero-image-s {
+  position: relative;
+  height: 100vh;
+  background-image: url("/Assets/hero-s.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-image-s::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* color semi-transparente */
+}
+
+/* Estilos para la sección de servicios */
+#services {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: #542c85;
+}
+
+#services p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.contiene-servicios {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.servicio {
+  flex-basis: 300px;
+}
+
+.servicio img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.servicio h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #542c85;
+}
+
+.servicio p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Estilos para los iconos de Font Awesome */
+.servicio i {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #542c85;
+}
+
+
+main{
+  margin: 0;
+  padding: 0;
+}
+
+

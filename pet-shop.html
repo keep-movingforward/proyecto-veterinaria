@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Estilos/estilos.css">
+    <title>Mi Mascota</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!--Sección inicial con logo en la barra nav-->
+            <section id="inicio">
+            <nav>
+                <img class="logo-nav" src="Assets/veterinaria-logo.png" alt="Logo Veterinaria">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="pet-shop.html">Pet Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            </nav>
+            </section>
+        </header>
+        <div class="hero-image-p">
+            <!--Imagen que cubre la parte inicial hasta barra de menús-->
+                <div class="hero-text">
+                  <h1></h1>
+                </div>
+        </div>
+
+    <main>
+        <section id="petshop">
+            <h2 class="section-title">Artículos</h2>
+            <div class="petshop-container">
+              <div class="product-card">
+                <img src="Assets/articulo1.webp" alt="Comida para gato">
+                <h3 class="product-title">Comida para cobayo</h3>
+                <p class="product-price">$10.00</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+              </div>
+              <div class="product-card">
+                <img src="Assets/articulo3.png" alt="Comida para perro">
+                <h3 class="product-title">Comida para gato</h3>
+                <p class="product-price">$12.00</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+              </div>
+              <div class="product-card">
+                <img src="Assets/articulo4.png" alt="Juguete para gato">
+                <h3 class="product-title">Juguete para gato</h3>
+                <p class="product-price">$5.00</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+              </div>
+              <div class="product-card">
+                <img src="Assets/articulo5.webp" alt="Comida para perro">
+                <h3 class="product-title">Comida para perro</h3>
+                <p class="product-price">$7.00</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+              </div>
+
+              <div class="product-card">
+                <img src="Assets/articulo6.jpg" alt="Árbol para gato">
+                <h3 class="product-title">Árbol para gato</h3>
+                <p class="product-price">$10.00</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+              </div>
+              <div class="product-card">
+                <img src="Assets/articulo7.jpg" alt="Comida para perro">
+                <h3 class="product-title">Cama colgante gato</h3>
+                <p class="product-price">$12.00</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+              </div>
+              <div class="product-card">
+                <img src="Assets/articulo8.png" alt="Juguete para gato">
+                <h3 class="product-title">Litera</h3>
+                <p class="product-price">$5.00</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+              </div>
+              <div class="product-card">
+                <img src="Assets/articulo9.jpg" alt="Juguete para perro">
+                <h3 class="product-title">Baño gato</h3>
+                <p class="product-price">$7.00</p>
+                <button class="btn-add-to-cart">Agregar al carrito</button>
+              </div>
+            </div>
+            <div class="cart-container">
+              <h3 class="cart-title">Carrito de compras</h3>
+              <ul class="cart-items">
+                <!-- los items agregados al carrito serán insertados aquí con JavaScript -->
+              </ul>
+              <p class="cart-total">Total: <span id="cart-total">$0.00</span></p>
+              <button class="btn-checkout">Proceder al pago</button>
+            </div>
+          </section>
+          
+    </main>
+
+    <div id="modal-container">
+        <div id="modal">
+          <button id="modal-close-btn">&times;</button>
+          <h2>Total a pagar: <span id="modal-total"></span></h2>
+          <form id="payment-form">
+            <label for="card-number">Número de tarjeta:</label>
+            <input type="text" id="card-number" required>
+            <label for="card-expiry">Fecha de expiración:</label>
+            <input type="text" id="card-expiry" placeholder="MM/AA" required>
+            <label for="card-cvc">CVC:</label>
+            <input type="text" id="card-cvc" required>
+            <button type="submit">Pagar</button>
+          </form>
+        </div>
+      </div>
+      
+      
+
+          <!--Footer derechos y desarrollador-->
+          <footer>
+            <p>© 2023 Mi Mascota Veterinaria. Todos los derechos reservados.</p>
+          </footer>
+          <div class="notification"></div>
+
+    </div>
+    <script src="Acciones/general.js"></script>
+    <script src="Acciones/pet-shop.js"></script>
+</body>
+</html>
