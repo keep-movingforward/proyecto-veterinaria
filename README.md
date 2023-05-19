@@ -56,4 +56,4 @@ Si tienes alguna pregunta o consulta relacionada con el proyecto, no dudes en co
 - Nombre: Alexis Ramos
 - Correo electrónico: alexleaderhere@gmail.com
 
-¡Gracias por leer sobre Veterinaria Mi Mascota! Espero que encuentres útil y valioso este sitio web para vos y tus mascotas.
+¡Gracias por leer sobre Veterinaria Mi Mascota! Espero que encuentres útil y valioso este sitio web para vos y tus mascotas!
