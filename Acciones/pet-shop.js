@@ -134,7 +134,7 @@ checkoutBtn.addEventListener('click', () => {
 
 paymentForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  // aquí puedes agregar la lógica para procesar el pago
+
   modalContainer.style.display = 'none';
   alert('Pago procesado correctamente');
 });
