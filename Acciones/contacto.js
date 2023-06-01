@@ -16,7 +16,7 @@ form.addEventListener('submit', (event) => {
   };
 
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', 'https://sheetdb.io/api/v1/sjlq2dp4xrwzz', true);
+  xhr.open('POST', 'https://sheetdb.io/api/v1/coq96mpjn8rak', true);
   xhr.setRequestHeader('Content-Type', 'application/json');
   xhr.send(JSON.stringify(data));
 
