@@ -355,11 +355,38 @@ nav a:hover {
 
 /****************************** Sección de contacto */
 #contacto {
+  position: relative;
   background-color: #885ead;
   color: #fff;
   padding: 80px 0;
+  z-index: 1;
+}
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
 }
 
+.video-container iframe {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 .contenedor-contacto {
   display: flex;
   justify-content: space-between;
@@ -433,7 +460,7 @@ max-width: 500px;
 
 
 .contenedor-redes-sociales {
-  width: 100%;
+
   text-align: center;
 }
 
@@ -494,7 +521,112 @@ footer {
 footer p {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
 }
+
+
+
+.titulo-novedades{
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+.footer-title-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-title-container hr {
+  width: 30%;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 2% 30px 2%;
+  background-color: #885ead;
+
+}
+
+.subscribe-form input {
+  flex: 1;
+  margin-right: 0;
+  height: 30px;
+  border: solid #fff;
+  background-color: #885ead;
+  border-right: none;
+}
+
+.subscribe-form button {
+  border: solid #fff;
+  height: 38px;
+  background-color: #885ead;
+  color:#fff
+}
+
+.subscribe-form input:focus,
+.subscribe-form button:hover {
+  background-color: #d9b3ff;
+}
+
+.terminos, .politica{
+  color: #CE96CE;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out
+}
+
+.terminos:hover, .politica:hover{
+  color: #fff
+}
+
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+   .redes-sociales{
+       justify-content:center;
+   }
+   
+   .subscribe-form input{
+       width:auto;
+   }
+   
+   .subscribe-form button{
+       margin-right:auto;
+       margin-left:auto; 
+   }
+   
+   form input[type="submit"]{
+       margin-right:auto;
+       margin-left:auto; 
+   }
+   
+   form input[type="text"],
+   form input[type="email"],
+   form input[type="tel"],
+   form textarea{
+       margin-right:auto; 
+       margin-left:auto; 
+       display:block; 
+   }
+
+}
+
 
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -668,73 +800,98 @@ footer p {
   background-color: rgba(0, 0, 0, 0.5); /* color semi-transparente */
 }
 
-/***/
-
-/* Estilos para la sección de contacto */
-
-.contenedor-gral-contacto {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 50px 20px;
-}
 
 
+/*-------------- Contacto sección contacto --*/
 
-.formulario-contacto {
+.contact-section {
   display: flex;
   flex-wrap: wrap;
+  font-family: Arial, sans-serif;
 }
 
-.campo-formulario {
+.column {
+  flex: 1;
+  margin: 10px;
+}
+
+.row {
+  display: flex;
+}
+
+.card {
+  flex: 1;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f0e6f6;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #4b0082;
+}
+
+.formulario-contacto {
+  margin: 10px;
+  padding: 20px;
+  background-color: #f0e6f6;
+  border-radius: 10px;
+}
+
+.formulario-contacto h2 {
+  margin-top: 0;
+  color: #4b0082;
+}
+
+.formulario-contacto input[type="text"],
+.formulario-contacto input[type="email"],
+.formulario-contacto input[type="tel"],
+.formulario-contacto textarea {
   width: 100%;
-  margin-bottom: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  
 }
 
-.campo-formulario label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: #333;
+.formulario-contacto input[type="submit"] {
+  background-color: #4b0082;
+  color: white;
+  padding: 10px 20px;
 }
 
-.campo-formulario input,
-.campo-formulario textarea {
+
+.map-container {
+  position: relative;
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  background-color: #f4f4f4;
-  color: #333;
+  padding-bottom: 25%;
 }
-
-.campo-formulario input:focus,
-.campo-formulario textarea:focus {
-  outline: none;
-  box-shadow: 0 0 5px #CE96CE;
-}
-
-.boton-formulario {
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  margin-top: 20px;
-  text-align: center;
+  height: 100%;
 }
 
-.boton-formulario button {
-  padding: 10px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  background-color: #CE96CE;
-  color: #fff;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+@media (max-width: 600px) {
+  .column {
+    flex-basis: 100%;
+  }
+  .row {
+    flex-direction: column;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .map-container {
+    padding-bottom: 60%;
+  }
 }
 
-.boton-formulario button:hover {
-  background-color: #333;
-}
+
+
 
 
 /********************* PÁGINA SOBRE NOSOTROS (ABOUT) ****************************/

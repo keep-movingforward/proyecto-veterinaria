@@ -35,34 +35,81 @@
         </div>
         </div>
         <main>
-            <div class="contenedor-gral-contacto">
-           
+          <div class="contact-section">
+            <div class="column">
+              <div class="row">
+                <div class="card">
+                  <h3><i class="fas fa-map-marker-alt"></i> Dirección</h3>
+                  <p>Av. Siempreviva 742</p>
+                </div>
+                <div class="card">
+                  <h3><i class="fas fa-phone"></i> Teléfono</h3>
+                  <p>+54 11 5555-5555</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card">
+                  <h3><i class="fas fa-clock"></i> Horarios</h3>
+                  <p>Lun - Vie de 9:00 a 18:00 <br> 
+                    Sábados de 9:00 a 13:00</p>
+                </div>
+                <div class="card">
+                  <h3><i class="fa-solid fa-truck-medical"></i> Emergencias</h3>
+                  <p>+54 11 5555-4444 (24/7)</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="card">
+                  <h3><i class="fa-solid fa-map-location-dot"></i> Otras Sucursales</h3>
+                  <p>Av. Libertad 1234, Córdoba</p>
+                </div>
+                <div class="card">
+                  <h3><i class="fas fa-envelope"></i> Email</h3>
+                  <p>info@veterinariamascotera</p>
+                </div>
+              </div>
+            </div>
+            <div class="column">
               <form class="formulario-contacto">
-                <div class="campo-formulario">
-                  <label for="nombre">Nombre:</label>
-                  <input type="text" id="nombre" name="nombre" required>
-                </div>
-                <div class="campo-formulario">
-                  <label for="email">Email:</label>
-                  <input type="email" id="email" name="email" required>
-                </div>
-                <div class="campo-formulario">
-                  <label for="telefono">Teléfono:</label>
-                  <input type="tel" id="telefono" name="telefono" required>
-                </div>
-                <div class="campo-formulario">
-                  <label for="mensaje">Mensaje:</label>
-                  <textarea id="mensaje" name="mensaje" required></textarea>
-                </div>
-                <div class="boton-formulario">
-                  <button type="submit">Enviar</button>
-                </div>
+                <h2>Esperamos tu mensaje</h2>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required/>
+                <input type="email" id="email" name="email" placeholder="Email" required/>
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required/>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                <input type="submit" value="Enviar" />
               </form>
             </div>
+          </div>
           </main>
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.686870335936!2d-64.1876458494149!3d-31.416289267847355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9423a31b9d1dcf8b%3A0x4cd4a4d896e87209!2sC%C3%B3rdoba%2C%20Provincia%20de%20C%C3%B3rdoba!5e0!3m2!1sen!2sar!4v1650535245367!5m2!1sen!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
           <!--Footer derechos y desarrollador-->
           <footer>
-            <p>© 2023 Mi Mascota Veterinaria. Todos los derechos reservados.</p>
+            <div class="footer-title-container">
+              <hr />
+              <h2 class="footer-title">Mi Mascota</h2>
+              <hr />
+            </div>
+            <div class="footer-links">
+              <a class="politica" href="#">Política de privacidad</a>
+              <div class="contenedor-redes-sociales">
+                <div class="redes-sociales">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                  <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+              </div>
+              <a class="terminos" href="#">Términos y condiciones</a>
+            </div>
+            <h3 class="titulo-novedades">Novedades semanales</h3>
+            <form action="" class="subscribe-form">
+              <input type="email" placeholder="Email" />
+              <button type="submit">Suscribirse</button>
+            </form>
+            <p>© 2023 Mi Mascota Veterinaria. Todos los derechos reservados. Desarrollado por Alexis Ramos ✨</p>
           </footer>
     </div>
    <script src="Acciones/general.js"></script>
